@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flint"
+version = "0.1.0"
+description = "Training and evaluation code for FLINT retrieval models."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "huggingface_hub",
+    "numpy",
+    "ujson",
+    "tqdm",
+    "gitpython",
+]
+
+[tool.setuptools.packages.find]
+include = ["colbert*", "utility*", "flint_eval*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.cpp", "*.cu"]

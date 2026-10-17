@@ -1,0 +1,12 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.4.0
+transformers==4.48.3
+tokenizers>=0.21,<0.22
+huggingface_hub>=0.24,<1.0
+accelerate>=0.34
+einops
+numpy<2
+ujson
+tqdm
+gitpython
+datasets==2.21.0

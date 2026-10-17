@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+/data/*
+!/data/trec-tot-2025/
+/experiments/
+/results/
+
+.ipynb_checkpoints
+.DS_Store
+.vscode/
+.idea/
+
+/private/
