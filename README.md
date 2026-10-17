@@ -1,7 +1,8 @@
 # FLINT
 
-Code for FLINT, a late-interaction retriever that represents every query and document with a fixed
-number of vectors.
+Code for *FLINT: Fixed-budget Late Interaction* by Himank Handa, Negar Arabzadeh and Matei Zaharia.
+FLINT is a late-interaction retriever that represents every query and document with a fixed number
+of vectors.
 
 Install the requirements for the backbone you want (`requirements/bert.txt` or
 `requirements/modernbert.txt`) and `requirements/eval.txt` for evaluation. ModernBERT also needs
