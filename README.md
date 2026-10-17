@@ -5,8 +5,7 @@ FLINT is a late-interaction retriever that represents every query and document w
 of vectors.
 
 Install the requirements for the backbone you want (`requirements/bert.txt` or
-`requirements/modernbert.txt`) and `requirements/eval.txt` for evaluation. ModernBERT also needs
-flash-attention 2.
+`requirements/modernbert.txt`) and `requirements/eval.txt` for evaluation.
 
 Training:
 

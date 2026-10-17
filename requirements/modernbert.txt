@@ -10,3 +10,4 @@ ujson
 tqdm
 gitpython
 datasets==2.21.0
+flash-attn @ https://github.com/Dao-AILab/flash-attention/releases/download/v2.6.3/flash_attn-2.6.3+cu123torch2.4cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
