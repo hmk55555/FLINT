@@ -1,8 +1,41 @@
-# FLINT
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner.svg" alt="FLINT: Fixed-budget Late Interaction" width="100%">
+  </picture>
+</p>
 
-Code for *FLINT: Fixed-budget Late Interaction* by Himank Handa, Negar Arabzadeh and Matei Zaharia.
-FLINT is a late-interaction retriever that represents every query and document with a fixed number
-of vectors.
+<p align="center">
+  <img src="https://img.shields.io/badge/paper-coming%20soon-c2580f" alt="Paper: coming soon">
+  <a href="https://huggingface.co/collections/himankhanda/flint-6ad3ac31fafcb692ae534c3b"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20models-6%20checkpoints-2f6fb3" alt="Models on Hugging Face"></a>
+  <img src="https://img.shields.io/badge/python-3.10-6e7781" alt="Python 3.10">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-3b8a3e" alt="License: MIT"></a>
+</p>
+
+<p align="center">Himank Handa · Negar Arabzadeh · Matei Zaharia</p>
+
+FLINT is a late-interaction retriever that pools every query *and* every document into the same small,
+fixed number of vector embeddings. Storage and search cost stop growing with text length, which matters most
+for long, complex queries.
+
+## How it works
+
+The encoder gives one embedding per token. A shared perceiver uses **V** learned latents to pool those
+into V vectors, so a short query and a long document both end up as V vectors.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-dark.svg">
+  <img src="assets/architecture.svg" alt="Query and document token embeddings are pooled by a shared perceiver into V vectors each and compared with MaxSim" width="100%">
+</picture>
+
+## Results
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/highlights-dark.svg">
+  <img src="assets/highlights.svg" alt="Fixed Budget: V embeddings per query or document; 5.3 to 9.3 times smaller index than ColBERTv2; 1.5 to 2.8 times faster than ConstBERT on long queries" width="100%">
+</picture>
+
+## Usage
 
 Install the requirements for the backbone you want (`requirements/bert.txt` or
 `requirements/modernbert.txt`) and `requirements/eval.txt` for evaluation.
@@ -26,6 +59,8 @@ python scripts/measure_latency.py --checkpoint <checkpoint> --benchmark crumb/pa
 
 The baselines and other analysis scripts are in `scripts/`. Trained checkpoints are in this
 [Hugging Face collection](https://huggingface.co/collections/himankhanda/flint-6ad3ac31fafcb692ae534c3b).
+
+## Acknowledgements
 
 This code is built on [ColBERT](https://github.com/stanford-futuredata/ColBERT). It is released under
 the MIT license; `scripts/train_tokenlevel_modernbert.py` is adapted from
