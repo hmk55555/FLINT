@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/paper-coming%20soon-c2580f" alt="Paper: coming soon">
+  <a href="https://arxiv.org/abs/2610.27273"><img src="https://img.shields.io/badge/arXiv-2610.27273-c2580f" alt="arXiv: 2610.27273"></a>
   <a href="https://huggingface.co/collections/himankhanda/flint-6ad3ac31fafcb692ae534c3b"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20models-6%20checkpoints-2f6fb3" alt="Models on Hugging Face"></a>
   <img src="https://img.shields.io/badge/python-3.10-6e7781" alt="Python 3.10">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-3b8a3e" alt="License: MIT"></a>
