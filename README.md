@@ -20,12 +20,12 @@ for long, complex queries.
 
 ## How it works
 
-The encoder gives one embedding per token. A shared perceiver uses **V** learned latents to pool those
+The encoder gives one embedding per token. Attention-based pooling uses **V** learned latents to turn those
 into V vectors, so a short query and a long document both end up as V vectors.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-dark.svg">
-  <img src="assets/architecture.svg" alt="Query and document token embeddings are pooled by a shared perceiver into V vectors each and compared with MaxSim" width="100%">
+  <img src="assets/architecture.svg" alt="Query and document token embeddings are pooled by attention-based pooling into V vectors each and compared with MaxSim" width="100%">
 </picture>
 
 ## Results
